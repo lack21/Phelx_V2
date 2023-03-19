@@ -297,7 +297,7 @@ body {
     position: absolute;
     flex-direction: column;
     gap: 2rem !important;
-    top: -60vh;
+    top: -80vh;
     background-color: hsl(0, 0%, 100%);
     left: calc(50% - 45vw);
     max-width: 90%;
