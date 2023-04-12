@@ -1,0 +1,142 @@
+// lear
+// IP Address Tracker
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+// Colors
+$lightGray: hsl(0, 0%, 59%);
+$darkGray: hsl(0, 0%, 17%);
+$white: hsl(0, 0, 100%);
+$black: hsl(0, 0, 0%);
+
+body {
+  text-align: center;
+}
+
+.top-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 35%;
+  background-image: url(images/pattern-bg-desktop.png);
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+#map {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 65%;
+  z-index: -1;
+}
+
+.title {
+  color: $white;
+  font-weight: 700;
+  padding: 2rem 0;
+}
+
+.input-content {
+  width: min(600px, 90%);
+  display: flex;
+  margin: auto;
+  padding-bottom: 2.5rem;
+
+  #input-field {
+    width: 100%;
+    padding: 1.2rem;
+    border: none;
+    border-radius: 0.5rem 0 0 0.5rem;
+    -webkit-border-radius: 0.5rem 0 0 0.5rem;
+    -moz-border-radius: 0.5rem 0 0 0.5rem;
+    -ms-border-radius: 0.5rem 0 0 0.5rem;
+    -o-border-radius: 0.5rem 0 0 0.5rem;
+    outline: none;
+    font-size: 1rem;
+  }
+
+  .check-btn {
+    display: grid;
+    place-content: center;
+    padding: 1.2rem 1.4rem;
+    background-color: $black;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 0.5rem 0.5rem 0;
+    -webkit-border-radius: 0 0.5rem 0.5rem 0;
+    -moz-border-radius: 0 0.5rem 0.5rem 0;
+    -ms-border-radius: 0 0.5rem 0.5rem 0;
+    -o-border-radius: 0 0.5rem 0.5rem 0;
+
+    &:hover {
+      background-color: $darkGray;
+    }
+
+    img {
+      pointer-events: none;
+    }
+  }
+}
+
+.result-content {
+  width: 80%;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  background-color: $white;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  box-shadow: 0 0 0.1rem $lightGray;
+  gap: 2rem;
+
+  .item {
+    flex-basis: 100%;
+    text-align: left;
+
+    .name {
+      font-size: 0.725rem;
+      color: $lightGray;
+      letter-spacing: 0.15rem;
+      font-weight: 700;
+    }
+
+    .info {
+      padding-top: 0.5rem;
+      font-size: 1.4rem;
+      font-weight: 500;
+    }
+
+    &:not(:last-of-type) {
+      border-right: 1px solid $lightGray;
+      padding-right: 2rem;
+    }
+  }
+}
+
+// For Smaller Devices
+@media screen and (max-width: 1000px) {
+  .result-content {
+    flex-direction: column;
+    gap: 2.5rem !important;
+    width: 90%;
+
+    .item {
+      text-align: center;
+      border-right: none !important;
+      padding: 0 !important;
+    }
+  }
+}

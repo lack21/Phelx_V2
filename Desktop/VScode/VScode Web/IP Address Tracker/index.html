@@ -1,0 +1,77 @@
+<!-- lear -->
+<!-- IP Address Tracker -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <title>IP Address Tracker</title>
+  </head>
+  <body>
+    <!-- Main Content -->
+    <div class="top-image"></div>
+    <div id="map"></div>
+
+    <h1 class="title">IP Address Tracker</h1>
+
+    <div class="input-content">
+      <input
+        type="text"
+        name="text"
+        placeholder="Search for any IP address or domain"
+        id="input-field"
+      />
+      <button class="check-btn">
+        <img src="images/icon-arrow.svg" alt="icon-arrow" />
+      </button>
+    </div>
+
+    <div class="result-content">
+      <div class="item">
+        <h4 class="name">IP ADDRESS</h4>
+        <h3 class="info" id="ip">192.212.174.101</h3>
+      </div>
+      <div class="item">
+        <h4 class="name">LOCATION</h4>
+        <h3 class="info" id="location">Brooklyn, NY 10001</h3>
+      </div>
+      <div class="item">
+        <h4 class="name">TIMEZONE</h4>
+        <h3 class="info">UTC <span id="timezone">-05:00</span></h3>
+      </div>
+      <div class="item">
+        <h4 class="name">ISP</h4>
+        <h3 class="info" id="isp">SpaceX Starlink</h3>
+      </div>
+    </div>
+
+    <!-- Javascript -->
+    <noscript>You need enabled Javascript to run this app!</noscript>
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+    <script src="main.js"></script>
+  </body>
+</html>
